@@ -3,6 +3,11 @@ public class ContaBancaria {
     String titular;
     double saldo;
 
+    public ContaBancaria(String titular, double saldoInicial) {
+        this.titular = titular;
+        this.saldo = saldoInicial;
+    }
+
     // Métodos: O que a conta faz
     void depositar(double valor) {
         saldo = saldo + valor;
