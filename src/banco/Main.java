@@ -1,3 +1,4 @@
+package src.banco;
 public class Main {
     public static void main(String[] args) {
         ContaBancaria c1 = new ContaBancaria("Gabriel", 0);
@@ -5,5 +6,8 @@ public class Main {
 
         c1.getDetalhesUsuario();
         c2.getDetalhesUsuario();
+
+        // Static pertence à classe, não ao objeto
+        System.out.println(ContaBancaria.getTotalContas());
     }
 }
