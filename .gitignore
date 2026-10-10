@@ -1,0 +1,28 @@
+# Arquivos compilados
+*.class
+
+# Pastas de build
+bin/
+out/
+target/
+build/
+.gradle/
+
+# Logs
+*.log
+
+# Arquivos de empacotamento
+*.jar
+*.war
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
