@@ -1,19 +1,39 @@
 public class ContaBancaria {
-    // Atributos: o que a conta tem
-    String titular;
-    double saldo;
+    private String titular;
+    private double saldo;
 
     public ContaBancaria(String titular, double saldoInicial) {
         this.titular = titular;
         this.saldo = saldoInicial;
     }
 
-    // Métodos: O que a conta faz
     void depositar(double valor) {
-        saldo = saldo + valor;
+        if (valor <= 0) {
+            System.out.println("Valor inválido!");
+            return;
+        }
+
+        saldo += valor;
     }
 
-    void exibir() {
-        System.out.println(titular + " tem R$ " + saldo);
+    public boolean sacar(double valor) {
+        if (valor > 0 && valor <= saldo) {
+            saldo -= valor;
+            return true;
+        }
+
+        return false;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
     }
 }
